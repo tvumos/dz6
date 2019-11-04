@@ -11,9 +11,11 @@ DATE_CREATE = "04.11.2019"
 def show_separator():
     return "=" * 55
 
+def author():
+    return f"Создатель программы: {AUTHOR_PROGRAM}\nДата создания программы: {DATE_CREATE}\n"
 
 def show_author():
-    print(f"Создатель программы: {AUTHOR_PROGRAM}\nДата создания программы: {DATE_CREATE}\n")
+    print(author())
 
 
 def print_menu(menu_items):
@@ -22,26 +24,7 @@ def print_menu(menu_items):
     print(show_separator())
     # Выводим названи пункта меню и цифру начиная с 1
     for number, item in enumerate(menu_items, 0):
-        print(f'{number}. {item}')
-    print(show_separator())
-
-
-def show_help():
-    print(show_separator())
-    print('            Консольный файловый менеджер')
-    print(show_separator())
-    print(' 1 - Создать папку')
-    print(' 2 - Удалить (файл/папку)')
-    print(' 3 - Копировать (файл/папку)')
-    print(' 4 - Просмотр содержимого рабочей директории')
-    print(' 5 - Посмотреть только папки')
-    print(' 6 - Посмотреть только файлы')
-    print(' 7 - Просмотр информации об операционной системе')
-    print(' 8 - Создатель программы')
-    print(' 9 - Играть в викторину')
-    print(' 10 - Мой банковский счет')
-    print(' 11 - Смена рабочей директории')
-    print(' 0 - Выход')
+        print(f'{number} - {item}')
     print(show_separator())
 
 
